@@ -103,7 +103,7 @@ if __name__ == '__main__':
       print("Opening default data file data.yaml from log folder")
       f = open(FLAGS.path + '/data.yaml', 'r')
       datafile = FLAGS.path + '/data.yaml'
-    DATA = yaml.load(f)
+    DATA = yaml.safe_load(f)
   except:
     print("Error opening data yaml file. Check! Exiting...")
     quit()
@@ -118,7 +118,7 @@ if __name__ == '__main__':
       print("Opening default net file net.yaml from log folder")
       f = open(FLAGS.path + '/net.yaml', 'r')
       netfile = FLAGS.path + '/net.yaml'
-    NET = yaml.load(f)
+    NET = yaml.safe_load(f)
   except:
     print("Error opening net yaml file. Check! Exiting...")
     quit()
@@ -133,7 +133,7 @@ if __name__ == '__main__':
       print("Opening default train file train.yaml from log folder")
       f = open(FLAGS.path + '/train.yaml', 'r')
       trainfile = FLAGS.path + '/train.yaml'
-    TRAIN = yaml.load(f)
+    TRAIN = yaml.safe_load(f)
   except:
     print("Error opening train yaml file. Check! Exiting...")
     quit()
